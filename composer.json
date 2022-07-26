@@ -1,0 +1,41 @@
+{
+  "name": "mycoolpay/php-sdk",
+  "type": "library",
+  "description": "My-CoolPay official SDK for PHP",
+  "keywords": [
+    "mycoolpay",
+    "api",
+    "rest",
+    "sdk",
+    "payment"
+  ],
+  "homepage": "https://github.com/mycoolpay/php-sdk",
+  "license": "Apache-2.0",
+  "support": {
+    "forum": "https://t.me/mycoolpay",
+    "issues": "https://github.com/mycoolpay/php-sdk/issues"
+  },
+  "authors": [
+    {
+      "name": "My-CoolPay",
+      "email": "support@my-coolpay.com",
+      "homepage": "https://my-coolpay.com/en/"
+    }
+  ],
+  "require": {
+    "php": ">=5.4",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "mycoolpay/php-rest-client": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "MyCoolPay\\": "src/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.x-dev"
+    }
+  }
+}
