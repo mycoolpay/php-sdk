@@ -24,8 +24,8 @@ class MyCoolPayClient extends RestClient
     protected $privateKey;
 
     /**
-     * @param $public_key
-     * @param $private_key
+     * @param string $public_key
+     * @param string $private_key
      * @param LoggerInterface|null $logger
      * @param bool $debug
      */
