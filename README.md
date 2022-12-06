@@ -18,6 +18,18 @@ Before you start using this package, it's highly recommended to check resources 
 
 * [1. Requirements](#1-requirements)
 * [2. Installation](#2-installation)
+* [3. Interact with API](#2-installation)
+    * [3.1. Paylink](#31-paylink)
+    * [3.1. Payin](#32-payin)
+    * [3.1. OTP](#33-otp)
+    * [3.1. Payout](#34-payout)
+    * [3.1. Check status](#35-check-status)
+    * [3.1. Get balance](#36-get-balance)
+* [4. Security helpers](#4-security-helpers)
+    * [3.1. IP verification](#41-ip-verification)
+    * [3.1. Callback request integrity](#42-callback-request-integrity)
+* [More assistance](#2-installation)
+* [Contributors](#2-installation)
 
 ## 1. Requirements
 
@@ -333,9 +345,9 @@ getBalance(): MyCoolPay\Http\Response
 
 For more information check [Balance section in API Docs][api-docs-balance]
 
-## 3. Security helpers
+## 4. Security helpers
 
-### 3.1. IP verification
+### 4.1. IP verification
 
 ```php
 <?php
@@ -369,7 +381,7 @@ isVerifiedIp(string $ip): true
 
 For more information check [Security section in API Docs][api-docs-security]
 
-### 3.2. Callback request integrity
+### 4.2. Callback request integrity
 
 ```php
 <?php
