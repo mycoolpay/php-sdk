@@ -1,8 +1,11 @@
 # My-CoolPay PHP SDK
 
-[![Latest Version on Packagist][ico-version]][packagist-mycoolpay-php-sdk]
-[![Total Downloads][ico-downloads]][packagist-mycoolpay-php-sdk]
-[![PHP version][ico-php-version]][packagist-mycoolpay-php-sdk]  
+[![Latest version on Packagist](https://img.shields.io/packagist/v/mycoolpay/php-sdk?logo=packagist)][packagist-mycoolpay-php-sdk]
+[![Total downloads](https://img.shields.io/packagist/dt/mycoolpay/php-sdk?logo=packagist)][packagist-mycoolpay-php-sdk]
+[![Licence](https://img.shields.io/github/license/mycoolpay/php-sdk?logo=github)][repo-php-sdk]
+[![PHP version][ico-php-version]][file-composer-json]
+[![Github stars](https://img.shields.io/github/stars/mycoolpay?style=social)][repo-php-sdk]
+[![Licence](https://img.shields.io/badge/Telegram-1k-blue?style=social&logo=telegram)][forum-telegram]  
 My-CoolPay official SDK for PHP
 
 ## Note
@@ -26,14 +29,17 @@ Before you start using this package, it's highly recommended to check resources 
     * [3.1. Check status](#35-check-status)
     * [3.1. Get balance](#36-get-balance)
 * [4. Security helpers](#4-security-helpers)
-    * [3.1. IP verification](#41-ip-verification)
-    * [3.1. Callback request integrity](#42-callback-request-integrity)
+    * [4.1. IP verification](#41-ip-verification)
+    * [4.1. Callback request integrity](#42-callback-request-integrity)
 * [More assistance](#2-installation)
 * [Contributors](#2-installation)
 
 ## 1. Requirements
 
-This package requires: ![Required PHP version][ico-php-version]
+This package requires:
+[![Required PHP version][ico-php-version]][file-composer-json]
+[![Extension CURL](https://img.shields.io/packagist/dependency-v/mycoolpay/php-sdk/ext-curl?logo=php)][file-composer-json]
+[![Extension JSON](https://img.shields.io/packagist/dependency-v/mycoolpay/php-sdk/ext-json?logo=php)][file-composer-json]
 
 ## 2. Installation
 
@@ -47,7 +53,7 @@ $ composer require mycoolpay/php-sdk
 
 ### 2.2. Initialize SDK object
 
-Now you need to initialize SDK object with your API keys.
+Now you need to initialize the SDK object with your API keys.
 
 ```php
 <?php
@@ -253,9 +259,9 @@ try {
     $message = $response->getMessage();
     
     if ($status_code === Http::OK) {
-        // Successful withdrawal
+        // Successful payout
     } elseif ($status_code === Http::ACCEPTED) {
-        // Withdrawal is pending in background
+        // Payout is pending in background
     } else {
         throw new Exception($message, $status_code);
     }
@@ -431,11 +437,7 @@ You can also get help from the [developer community 💬][forum-telegram]
 - [Aristide Herve MBASSI][contributor-ambass]
 - [Aubry Yvan FANDOM][contributor-yfan]
 
-[ico-version]: https://img.shields.io/packagist/v/mycoolpay/php-sdk
-
-[ico-downloads]: https://img.shields.io/packagist/dt/mycoolpay/php-sdk
-
-[ico-php-version]: https://img.shields.io/packagist/php-v/mycoolpay/php-sdk
+[ico-php-version]: https://img.shields.io/packagist/php-v/mycoolpay/php-sdk?logo=php
 
 [mycoolpay]: https://my-coolpay.com
 
@@ -462,6 +464,10 @@ You can also get help from the [developer community 💬][forum-telegram]
 [wordpress-docs]: https://documenter.getpostman.com/view/17178321/UV5aeFBY
 
 [repo-php-logger]: https://github.com/mycoolpay/php-logger
+
+[repo-php-sdk]: https://github.com/mycoolpay/php-sdk
+
+[file-composer-json]: https://github.com/mycoolpay/php-sdk/blob/master/composer.json
 
 [file-logger-interface]: https://github.com/mycoolpay/php-logger/blob/master/src/LoggerInterface.php
 
